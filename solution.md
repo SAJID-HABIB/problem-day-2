@@ -23,6 +23,22 @@ return max;
 
 console.log(maxOfThree(a,b,c));
 
+Q2.
+
+function check(n) {
+    if (n > 0) {
+        return 'number is positive'        
+    } else if (n < 0) {
+        return 'number is negative'
+    } else {
+        return' number is zero'        
+    }
+}
+
+
+console.log(check(9));
+
+
 Q5.
 
 let n = Number(prompt("Enetr the year to check it is leap or not :"));
