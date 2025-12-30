@@ -5,7 +5,7 @@ function maxOfThree(a, b, c) {
   let max;
   debugger;
 
-  if (a >= b && a >= c) {
+  if (a >= b || a >= c) {
     max = { a };
   } else if (b >= c) {
     max = { b };
@@ -38,21 +38,43 @@ function check(n) {
 
 console.log(check(9));
 
-function totalBill(unit) {
+function totalBill(units) {
   let bill;
-  if (unit > 0 && unit <= 100) {
-    bill = unit * 5;
+  if (units <= 100) {
+    bill = units * 5;
     return bill;
-  } else if (unit > 101 && unit <= 200) {
-    bill = unit * 7;
+  } else if (units <= 200) {
+    bill = (100 * 5) + (units -100) * 7;
     return bill;
-  } else if (unit > 201 && unit <= 300) {
-    bill = unit * 10;
+  } else if (units <= 300) {
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10;
     return bill;
   } else {
-    bill = unit * 12;
+    bill = (100 * 5) + (100 * 10) + (units - 300) * 12;
     return bill;
+
+}
+
+console.log(("the total bill is :"),totalBill(250));
+
+let cahr;
+
+
+
+function checkWovel(cahr) {
+  //convert uper case to lower case 
+  const cahrLowerCase = cahr.toLowerCase();
+  if (
+    cahrLowerCase === "a" ||
+    cahrLowerCase === "e" ||
+    cahrLowerCase === "i" ||
+    cahrLowerCase === "o" ||
+    cahrLowerCase === "u"
+  ) {
+    return "vowel";
+  } else {
+    return "consonent";
   }
 }
 
-console.log(totalBill(1000));
+console.log(checkWovel("A"));

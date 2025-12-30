@@ -38,6 +38,28 @@ function check(n) {
 
 console.log(check(9));
 
+Q3. 
+
+
+function totalBill(units) {
+  let bill;
+  if (units <= 100) {
+    bill = units * 5;
+    return bill;
+  } else if (units <= 200) {
+    bill = (100 * 5) + (units -100) * 7;
+    return bill;
+  } else if (units <= 300) {
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10;
+    return bill;
+  } else {
+    bill = (100 * 5) + (100 * 10) + (units - 300) * 12;
+    return bill;
+  }
+}
+
+console.log(("the total bill is :"),totalBill(230));
+
 
 Q5.
 
