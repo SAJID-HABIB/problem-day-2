@@ -55,26 +55,23 @@ function totalBill(units) {
 
 }
 
+}
+
+
 console.log(("the total bill is :"),totalBill(250));
 
 let cahr;
 
 
 
-function checkWovel(cahr) {
+function checkWovel(cahr = "0") {
   //convert uper case to lower case 
-  const cahrLowerCase = cahr.toLowerCase();
-  if (
-    cahrLowerCase === "a" ||
-    cahrLowerCase === "e" ||
-    cahrLowerCase === "i" ||
-    cahrLowerCase === "o" ||
-    cahrLowerCase === "u"
-  ) {
+  if ("aeiou".includes(cahr.toLocaleLowerCase()) && cahr !== "") {
     return "vowel";
-  } else {
+  } else if(/[a-z]/.test(cahr.toLocaleLowerCase())) {
     return "consonent";
   }
+  return "not a valid alphabet "
 }
 
-console.log(checkWovel("A"));
+console.log(checkWovel());
